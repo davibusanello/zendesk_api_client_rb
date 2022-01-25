@@ -277,6 +277,14 @@ module ZendeskAPI
     has Group
   end
 
+  class Schedule < Resource
+    class << self
+      def resource_path
+        "business_hours/schedules"
+      end
+    end
+  end
+
   class Request < Resource
     class Comment < DataResource
       include Save
